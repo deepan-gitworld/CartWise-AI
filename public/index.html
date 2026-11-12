@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Cartwise — shopping, made thoughtful</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Cartwise home"><span class="brand-mark">c</span> cartwise<span class="brand-ai">AI</span></a>
+    <div class="top-note"><span class="status-dot"></span> sandbox experience <span class="top-divider">·</span> thoughtful by design</div>
+    <button class="avatar" aria-label="Profile">CW</button>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">A little help choosing well</p>
+      <h1>Good picks.<br><em>Clear checkout.</em></h1>
+      <p class="intro-copy">Tell us what matters: the need, budget, delivery timing, or return flexibility. Cartwise finds a fit and shows the terms before you pay.</p>
+      <div class="trust-row"><span>01 &nbsp; Describe</span><span class="trust-line"></span><span>02 &nbsp; Review</span><span class="trust-line"></span><span>03 &nbsp; Pay</span></div>
+      <div class="feature-note"><span class="sparkle">✳</span><span><strong>Your choice stays yours.</strong><br>AI makes a suggestion. You review every item before checkout.</span></div>
+    </section>
+
+    <section class="shop-card" aria-label="AI shopping assistant">
+      <div class="card-heading"><div><p class="eyebrow">YOUR PERSONAL SHOPPING ASSISTANT</p><h2>What are we looking for?</h2></div><span class="assistant-icon">✳</span></div>
+      <label class="prompt-label" for="prompt">What matters for this purchase?</label>
+      <textarea id="prompt" rows="3" placeholder="A sketchbook for a creative student, under $20, with easy returns…"></textarea>
+      <div class="examples"><span>Try:</span><button class="example" data-prompt="A small study kit for a student, under $20">Study kit</button><button class="example" data-prompt="A thoughtful gift for a creative friend under $25, easy returns">Creative gift</button><button class="example" data-prompt="A practical everyday item that arrives within 4 business days">Fast delivery</button></div>
+      <button class="primary-button" id="suggest"><span>✨</span> Find my picks <span class="arrow">↗</span></button>
+      <p class="helper" id="assistant-status">A short description is all we need.</p>
+
+      <div class="suggestion hidden" id="suggestion">
+        <div class="suggestion-head"><div><p class="eyebrow">A CARTWISE SUGGESTION</p><h3>Your picks</h3></div><button id="clear-cart" class="text-button">Start over</button></div>
+        <p class="ai-message" id="ai-message"></p>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="price-summary">
+          <div><span>Items</span><strong id="cart-subtotal">$0.00</strong></div>
+          <div><span>Standard delivery</span><strong id="cart-shipping">$0.00</strong></div>
+          <div class="cart-total"><span>Total <small>USD</small></span><strong id="cart-total">$0.00</strong></div>
+        </div>
+        <div id="paypal-buttons"></div>
+        <p class="sandbox-caption"><span class="status-dot"></span> PayPal sandbox · no real payment is taken</p>
+      </div>
+      <div class="fineprint"><span>🔒</span> Secure checkout powered by PayPal sandbox</div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Cartwise AI</span><span>Good choices, made easier.</span><span>Demo store · USD</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
